@@ -74,6 +74,10 @@ public class Display {
 			return op.log(a);
 		case ('f'):
 			return op.fatorial(a,0);
+		case ('i'):
+			return op.inverter(a);
+		case ('x'):
+			return op.umSobreX(a);
 
 		}
 		return null;

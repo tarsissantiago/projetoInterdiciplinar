@@ -57,4 +57,14 @@ public class Operacoes {
 
 		return String.valueOf(Math.log10(a));
 	}
+	
+	public String inverter(double a) {
+
+		return String.valueOf(a*-1);
+	}
+
+	public String umSobreX(double a) {
+		
+		return String.valueOf(1/a);
+	}
 }

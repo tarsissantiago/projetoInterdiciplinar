@@ -1,7 +1,5 @@
 package br.faccamp.domain;
 
-import java.awt.Button;
-
 import br.faccamp.view.CalculadoraGUI;
 
 public class Calculadora {
