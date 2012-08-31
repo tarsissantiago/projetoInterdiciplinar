@@ -28,7 +28,10 @@ public class Display {
 	}
 
 	public void podeDigitar(String texto) {
-			if(getConteudo().indexOf(texto)==-1){
+			if(finalDoNumero)
+				atualiza("0"+texto);
+			else
+				if(getConteudo().indexOf(texto)==-1){
 				atualiza(texto);
 			}
 					

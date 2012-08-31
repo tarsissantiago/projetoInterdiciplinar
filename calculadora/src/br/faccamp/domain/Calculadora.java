@@ -188,6 +188,7 @@ public class Calculadora {
 	// memoria & funçoes calculadora
 
 	public void processaCE() {
+		processaMC();
 		gui.atualizaDisplay("0");
 		display.salvaA();
 		display.expresao = (false);

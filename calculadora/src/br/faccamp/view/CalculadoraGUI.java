@@ -2,6 +2,8 @@ package br.faccamp.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -46,6 +48,117 @@ public class CalculadoraGUI {
 		});
 		buttonMC.setBounds(45, 79, 63, 39);
 		frame.getContentPane().add(buttonMC);
+		frame.setResizable(false);
+		frame.setFocusable(true);
+		frame.addKeyListener(new KeyListener() {
+
+			/*
+			 * Evento do teclado
+			 */
+
+			public void keyTyped(KeyEvent e) {
+
+			}
+
+			public void keyReleased(KeyEvent event) {
+
+			}
+
+			public void keyPressed(KeyEvent ke) {
+				switch (ke.getKeyCode()) {
+				// *****numeros****
+				case 96:
+					calculadora.processaZero();
+					break;
+				case 48:
+					calculadora.processaZero();
+					break;
+				case 97:
+					calculadora.processaUm();
+					break;
+				case 49:
+					calculadora.processaUm();
+					break;
+				case 98:
+					calculadora.processaDois();
+					break;
+				case 50:
+					calculadora.processaDois();
+					break;
+				case 99:
+					calculadora.processaTres();
+					break;
+
+				case 51:
+					calculadora.processaTres();
+					break;
+				case 100:
+					calculadora.processaQuatro();
+					break;
+				case 52:
+					calculadora.processaQuatro();
+					break;
+				case 101:
+					calculadora.processaCinco();
+					break;
+				case 53:
+					calculadora.processaCinco();
+					break;
+				case 102:
+					calculadora.processaSeis();
+					break;
+				case 54:
+					calculadora.processaSeis();
+					break;
+				case 103:
+					calculadora.processaSete();
+					break;
+				case 55:
+					calculadora.processaSete();
+					break;
+				case 104:
+					calculadora.processaOito();
+					break;
+				case 56:
+					calculadora.processaOito();
+					break;
+				case 105:
+					calculadora.processaNove();
+					break;
+				case 57:
+					calculadora.processaNove();
+					break;
+				// ******operadores**********
+				case 111:
+					calculadora.processaDivisao();
+					break;
+				case 109:
+					calculadora.processaMenos();
+					break;
+				case 107:
+					calculadora.processaMais();
+					break;
+				case 106:
+					calculadora.processaVezes();
+					break;
+				case 10:
+					calculadora.processaIgual();
+					break;
+				case 0:
+					calculadora.processaVirgula();
+					break;
+				case 46:
+					calculadora.processaVirgula();
+					break;
+				case 110:
+					calculadora.processaVirgula();
+					break;
+
+				}
+
+			}
+
+		});
 
 		display = new JTextField("0");
 		display.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -53,7 +166,6 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(display);
 		display.setColumns(10);
 		display.setEditable(false);
-		
 
 		JButton buttonMR = new JButton("MR");
 		buttonMR.addActionListener(new ActionListener() {
@@ -280,7 +392,7 @@ public class CalculadoraGUI {
 		buttonZero.setBounds(45, 322, 63, 39);
 		frame.getContentPane().add(buttonZero);
 
-		JButton buttonVirgula = new JButton(",");
+		JButton buttonVirgula = new JButton(".");
 		buttonVirgula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaVirgula();
