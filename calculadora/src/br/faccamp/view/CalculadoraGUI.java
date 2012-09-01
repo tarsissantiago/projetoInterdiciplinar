@@ -168,6 +168,7 @@ public class CalculadoraGUI {
 		display.setEditable(false);
 
 		JButton buttonMR = new JButton("MR");
+		buttonMR.setFocusable(false);
 		buttonMR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMR();
@@ -177,6 +178,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonMR);
 
 		JButton btnMS = new JButton("MS");
+		btnMS.setFocusable(false);
 		btnMS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				calculadora.processaMS();
@@ -186,6 +188,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnMS);
 
 		JButton btnMMais = new JButton("M+");
+		btnMMais.setFocusable(false);
 		btnMMais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMMais();
@@ -195,6 +198,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnMMais);
 
 		JButton btnMMenos = new JButton("M-");
+		btnMMenos.setFocusable(false);
 		btnMMenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMMenos();
@@ -204,6 +208,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnMMenos);
 
 		JButton btnCE = new JButton("CE");
+		btnCE.setFocusable(false);
 		btnCE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaCE();
@@ -213,6 +218,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnCE);
 
 		JButton btnC = new JButton("C");
+		btnC.setFocusable(false);
 		btnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaC();
@@ -222,6 +228,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnC);
 
 		JButton btnRaiz = new JButton("Raiz");
+		btnRaiz.setFocusable(false);
 		btnRaiz.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaRaiz();
@@ -231,6 +238,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnRaiz);
 
 		JButton buttonMaisOuMenos = new JButton("+/-");
+		buttonMaisOuMenos.setFocusable(false);
 		buttonMaisOuMenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMaisOuMenos();
@@ -240,6 +248,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonMaisOuMenos);
 
 		JButton btnFatorial = new JButton("n!");
+		btnFatorial.setFocusable(false);
 		btnFatorial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaFatorial();
@@ -249,6 +258,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnFatorial);
 
 		JButton buttonSete = new JButton("7");
+		buttonSete.setFocusable(false);
 		buttonSete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaSete();
@@ -258,6 +268,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonSete);
 
 		JButton buttonOito = new JButton("8");
+		buttonOito.setFocusable(false);
 		buttonOito.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaOito();
@@ -267,6 +278,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonOito);
 
 		JButton buttonNove = new JButton("9");
+		buttonNove.setFocusable(false);
 		buttonNove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaNove();
@@ -276,6 +288,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonNove);
 
 		JButton buttonDivisao = new JButton("/");
+		buttonDivisao.setFocusable(false);
 		buttonDivisao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaDivisao();
@@ -285,6 +298,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonDivisao);
 
 		JButton buttonPercentual = new JButton("%");
+		buttonPercentual.setFocusable(false);
 		buttonPercentual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaPorcentual();
@@ -294,6 +308,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonPercentual);
 
 		JButton buttonQuatro = new JButton("4");
+		buttonQuatro.setFocusable(false);
 		buttonQuatro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaQuatro();
@@ -303,6 +318,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonQuatro);
 
 		JButton buttonCinco = new JButton("5");
+		buttonCinco.setFocusable(false);
 		buttonCinco.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaCinco();
@@ -312,6 +328,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonCinco);
 
 		JButton buttonSeis = new JButton("6");
+		buttonSeis.setFocusable(false);
 		buttonSeis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaSeis();
@@ -321,6 +338,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonSeis);
 
 		JButton buttonVezes = new JButton("*");
+		buttonVezes.setFocusable(false);
 		buttonVezes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaVezes();
@@ -330,6 +348,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonVezes);
 
 		JButton btnUmSobreX = new JButton("1/x");
+		btnUmSobreX.setFocusable(false);
 		btnUmSobreX.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaUmSobreX();
@@ -339,6 +358,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnUmSobreX);
 
 		JButton buttonUm = new JButton("1");
+		buttonUm.setFocusable(false);
 		buttonUm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaUm();
@@ -348,6 +368,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonUm);
 
 		JButton buttonDois = new JButton("2");
+		buttonDois.setFocusable(false);
 		buttonDois.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaDois();
@@ -357,6 +378,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonDois);
 
 		JButton buttonTres = new JButton("3");
+		buttonTres.setFocusable(false);
 		buttonTres.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaTres();
@@ -366,6 +388,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonTres);
 
 		JButton buttonMenos = new JButton("-");
+		buttonMenos.setFocusable(false);
 		buttonMenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMenos();
@@ -375,6 +398,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonMenos);
 
 		JButton btnXElevadoY = new JButton("x^y");
+		btnXElevadoY.setFocusable(false);
 		btnXElevadoY.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaXElevadoY();
@@ -384,6 +408,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(btnXElevadoY);
 
 		JButton buttonZero = new JButton("0");
+		buttonZero.setFocusable(false);
 		buttonZero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaZero();
@@ -393,6 +418,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonZero);
 
 		JButton buttonVirgula = new JButton(".");
+		buttonVirgula.setFocusable(false);
 		buttonVirgula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaVirgula();
@@ -402,6 +428,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonVirgula);
 
 		JButton buttonIgual = new JButton("=");
+		buttonIgual.setFocusable(false);
 		buttonIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaIgual();
@@ -411,6 +438,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonIgual);
 
 		JButton buttonMais = new JButton("+");
+		buttonMais.setFocusable(false);
 		buttonMais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaMais();
@@ -420,6 +448,7 @@ public class CalculadoraGUI {
 		frame.getContentPane().add(buttonMais);
 
 		JButton btnLog = new JButton("log");
+		btnLog.setFocusable(false);
 		btnLog.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculadora.processaLog();
@@ -434,6 +463,7 @@ public class CalculadoraGUI {
 		frame.setBounds(100, 100, 450, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Calculadora");
 	}
 
 	public void atualizaDisplay(String texto) {

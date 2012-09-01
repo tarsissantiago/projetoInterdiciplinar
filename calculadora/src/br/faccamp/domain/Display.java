@@ -5,10 +5,26 @@ import br.faccamp.view.CalculadoraGUI;
 public class Display {
 
 	private CalculadoraGUI gui;
-	public double a, b;
-	public char operador='=';
+	private double a, b;
+	public char operador = '=';
 	public boolean expresao, finalDoNumero, digitou = false;
 	private Operacoes op = new Operacoes(gui);
+
+	public double getA() {
+		return a;
+	}
+
+	public void setA(double a) {
+		this.a = a;
+	}
+
+	public double getB() {
+		return b;
+	}
+
+	public void setB(double b) {
+		this.b = b;
+	}
 
 	public Display(CalculadoraGUI gui) {
 		this.gui = gui;
@@ -16,25 +32,24 @@ public class Display {
 	}
 
 	public void atualiza(String texto) {
-				if ((getConteudo().equalsIgnoreCase("0")&&!(texto.equalsIgnoreCase("."))) || finalDoNumero) {
+		if ((getConteudo().equalsIgnoreCase("0") && !(texto
+				.equalsIgnoreCase("."))) || finalDoNumero) {
 
-				zeraDisplay();
-				gui.atualizaDisplay(texto);
-				finalDoNumero = (false);
-			} else {
-				gui.atualizaDisplay((getConteudo() + texto));
-			}
-			digitou = (true);
+			zeraDisplay();
+			gui.atualizaDisplay(texto);
+			finalDoNumero = (false);
+		} else {
+			gui.atualizaDisplay((getConteudo() + texto));
+		}
+		digitou = (true);
 	}
 
 	public void podeDigitar(String texto) {
-			if(finalDoNumero)
-				atualiza("0"+texto);
-			else
-				if(getConteudo().indexOf(texto)==-1){
-				atualiza(texto);
-			}
-					
+		if (finalDoNumero)
+			atualiza("0" + texto);
+		else if (getConteudo().indexOf(texto) == -1) {
+			atualiza(texto);
+		}
 
 	}
 
@@ -58,7 +73,7 @@ public class Display {
 	public String calcula() {
 		switch (operador) {
 
-		// operaçoescomcoid valores
+		// operaçoes com dois valores
 		case ('+'):
 			return op.soma(a, b);
 		case ('-'):
@@ -69,6 +84,8 @@ public class Display {
 			return op.divisao(a, b);
 		case ('e'):
 			return op.yElevadoX(a, b);
+		case ('%'):
+			return op.porecentagem(a, b);
 
 			// Operaçoes com um valor
 		case ('r'):
@@ -76,7 +93,7 @@ public class Display {
 		case ('l'):
 			return op.log(a);
 		case ('f'):
-			return op.fatorial(a,0);
+			return op.fatorial(a, a);
 		case ('i'):
 			return op.inverter(a);
 		case ('x'):
@@ -85,5 +102,15 @@ public class Display {
 		}
 		return null;
 
+	}
+
+	public String analizaResultado() {
+		String resultado = calcula();
+		if (resultado.charAt(resultado.length() - 1) == '0') {
+			resultado = resultado.replace('.', ' ');
+			String results[] = resultado.split(" ");
+			return results[0];
+		} else
+			return resultado;
 	}
 }

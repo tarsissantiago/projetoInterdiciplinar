@@ -102,7 +102,7 @@ public class Calculadora {
 	public void processaIgual() {
 		if (display.operador != '=') {
 			display.salvaB();
-			gui.atualizaDisplay(display.calcula());
+			gui.atualizaDisplay((display.analizaResultado()));
 			display.finalDoNumero = (true);
 			display.expresao = (false);
 			display.operador = '=';
@@ -141,7 +141,7 @@ public class Calculadora {
 				display.expresao = (true);
 			} else {
 				display.salvaB();
-				gui.atualizaDisplay(display.calcula());
+				gui.atualizaDisplay(display.analizaResultado());
 				display.salvaA();
 				display.finalDoNumero = (true);
 				display.operador = op;
@@ -167,7 +167,14 @@ public class Calculadora {
 	}
 
 	public void processaPorcentual() {
-		botaoOperacaoComDoisValoresPresionado('%');
+		char auxOperador = display.operador;
+		double auxA = display.getA();
+		display.operador = ('%');
+		display.salvaB();
+		gui.atualizaDisplay(display.analizaResultado());
+		display.setA(auxA);
+		display.operador = auxOperador;
+
 	}
 
 	public void processaUmSobreX() {
@@ -182,7 +189,7 @@ public class Calculadora {
 		display.salvaA();
 		display.finalDoNumero = (true);
 		display.operador = op;
-		gui.atualizaDisplay(display.calcula());
+		gui.atualizaDisplay(display.analizaResultado());
 	}
 
 	// memoria & funçoes calculadora

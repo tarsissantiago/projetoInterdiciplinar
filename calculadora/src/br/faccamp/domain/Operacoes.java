@@ -10,7 +10,7 @@ public class Operacoes {
 		this.gui = gui;
 	}
 
-	// ************* operaçopes com dois valores*************
+	// ************* operaçopes com dois0 valores*************
 	public String soma(double a, double b) {
 		return String.valueOf(a + b);
 
@@ -25,15 +25,13 @@ public class Operacoes {
 	}
 
 	public String divisao(double a, double b) {
-		if (b != 0) {
+		if (b != 0) 
 			return String.valueOf(a / b);
-		} else {
+		else 
 			return String.valueOf(0);
-		}
 	}
 
 	public String yElevadoX(double a, double b) {
-
 		return String.valueOf(Math.pow(a, b));
 	}
 
@@ -41,7 +39,7 @@ public class Operacoes {
 
 	public String fatorial(double a, double b) {
 		if (a >= 2) {
-			fatorial(a - 1, (a * a - 1));
+			fatorial(a - 1, (b * a - 1));
 		}
 		return String.valueOf(b);
 	}
@@ -52,17 +50,18 @@ public class Operacoes {
 	}
 
 	public String log(double a) {
-
 		return String.valueOf(Math.log10(a));
 	}
 
 	public String inverter(double a) {
-
 		return String.valueOf(a * -1);
 	}
 
 	public String umSobreX(double a) {
-
 		return String.valueOf(1 / a);
+	}
+
+	public String porecentagem(double a, double b) {
+		return String.valueOf(a*b/100);
 	}
 }
